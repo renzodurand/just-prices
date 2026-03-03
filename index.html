@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios Local</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📋 Lista de Precios</h2>
+
+        <input type="text" id="buscador" placeholder="🔍 Buscar producto...">
+
+        <table id="tablaProductos">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Normal</th>
+                    <th>Por Mayor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="marca-header"><td colspan="3">--- SAN FERNANDO ---</td></tr>
+                <tr><td>Hot dog x3 (SF)</td><td>S/6.50 pqt / S/1.50 und</td><td>-</td></tr>
+                <tr><td>Jamonada (SF)</td><td>S/6.50 pqt / S/1.50 und</td><td>-</td></tr>
+                <tr><td>Hot dog x6 (SF)</td><td>S/12.50 pqt / S/2.50 und</td><td>-</td></tr>
+                <tr><td>Chorizo individual (SF)</td><td>S/8.50 pqt / S/1.80 und</td><td>-</td></tr>
+                <tr><td>Jamonada de pollo (SF)</td><td>S/14.40 pqt / S/2.80 und</td><td>-</td></tr>
+                <tr><td>Jamonada especial (SF)</td><td>S/18.60 pqt / S/3.50 und</td><td>-</td></tr>
+                <tr><td>Hot dog ahumado x5 (SF)</td><td>S/4.50 und</td><td>S/4.20 (x3+)</td></tr>
+                <tr><td>Paté (SF)</td><td>S/3.00 und</td><td>S/2.60 (x3+)</td></tr>
+                <tr><td>Hot dog rosado (SF)</td><td>S/8.00</td><td>S/7.80 (x3+)</td></tr>
+                <tr><td>Hot dog naranja (SF)</td><td>S/9.50</td><td>S/9.00 (x3+)</td></tr>
+                <tr><td>Hot dog especial (SF)</td><td>S/10.00</td><td>S/9.50 (x3+)</td></tr>
+                <tr><td>Hot dog ahumado x22 (SF)</td><td>S/11.50</td><td>S/11.00 (x3+)</td></tr>
+                <tr><td>Chorizo x6 manito (SF)</td><td>S/8.50</td><td>-</td></tr>
+                <tr><td>Chorizo x10 (SF)</td><td>S/11.00</td><td>S/10.50 (x3+)</td></tr>
+                <tr><td>Hamburguesa super carne (SF)</td><td>S/10.50</td><td>S/10.00 (x3+)</td></tr>
+                <tr><td>Hamburguesa super rica pollo (SF)</td><td>S/11.00</td><td>S/10.50 (x3+)</td></tr>
+                <tr><td>Hamburguesa casera carne/pollo (SF)</td><td>S/11.50</td><td>-</td></tr>
+                <tr><td>Choriburguer (SF)</td><td>S/16.00</td><td>-</td></tr>
+                <tr><td>Crocante (SF)</td><td>S/6.50</td><td>-</td></tr>
+                <tr><td>Nuggets x10 (SF)</td><td>S/5.50</td><td>S/5.00 (x3+)</td></tr>
+                <tr><td>Nuggets x36 (SF)</td><td>S/12.50</td><td>-</td></tr>
+                <tr><td>Nuggets 2k (SF)</td><td>S/36.50</td><td>S/35.50 (x3+)</td></tr>
+                <tr><td>Jamonada especial molde (SF)</td><td>S/20.00 kg</td><td>S/37.00 molde</td></tr>
+                <tr><td>Chicharrón molde (SF)</td><td>S/30.00 kg</td><td>-</td></tr>
+                <tr><td>Jamón sándwich molde (SF)</td><td>S/27.00 kg</td><td>-</td></tr>
+                <tr><td>Jamón pavita molde (SF)</td><td>S/45.00 kg</td><td>-</td></tr>
+
+                <tr class="marca-header"><td colspan="3">--- CERDEÑA ---</td></tr>
+                <tr><td>Jamonada (C)</td><td>S/6.50 pqt / S/1.50 und</td><td>-</td></tr>
+                <tr><td>Chicharrón de prensa (C)</td><td>S/13.50 pqt / S/3.00 und</td><td>-</td></tr>
+                <tr><td>Hot dog x3 (C)</td><td>S/6.50 pqt / S/1.50 und</td><td>-</td></tr>
+                <tr><td>Hot dog x6 (C)</td><td>S/14.00 pqt / S/2.80 und</td><td>-</td></tr>
+                <tr><td>Hot dog napolitana x30 (C)</td><td>S/7.00</td><td>S/6.80 (x3+)</td></tr>
+                <tr><td>Hot dog Pepe (C)</td><td>S/7.00</td><td>S/6.80 (x3+)</td></tr>
+                <tr><td>Hot dog rosado x26 (C)</td><td>S/8.50</td><td>S/8.00 (x3+)</td></tr>
+                <tr><td>Hot dog naranja x26 (C)</td><td>S/8.50</td><td>S/8.00 (x3+)</td></tr>
+                <tr><td>Hot dog ahumado x5 (C)</td><td>S/5.00</td><td>S/4.80 (x3+)</td></tr>
+                <tr><td>Hot dog ahumado x10 (C)</td><td>S/8.00</td><td>S/7.80 (x3+)</td></tr>
+                <tr><td>Hot dog ahumado x20 (C)</td><td>S/12.50</td><td>S/12.00 (x3+)</td></tr>
+                <tr><td>Chorizo individual (C)</td><td>S/8.50 pqt / S/1.80 und</td><td>-</td></tr>
+                <tr><td>Chorizo x6 (C)</td><td>S/8.00</td><td>-</td></tr>
+                <tr><td>Chorizo x12 (C)</td><td>S/11.50</td><td>S/11.00 (x3+)</td></tr>
+                <tr><td>Chorizo finas x12 (C)</td><td>S/14.00</td><td>S/13.50 (x3+)</td></tr>
+                <tr><td>Hamburguesa napolitana (C)</td><td>S/9.50</td><td>S/9.00 (x3+)</td></tr>
+                <tr><td>Hot dog granel pollo (C)</td><td>S/6.20 kg</td><td>S/59.00 bolsa</td></tr>
+                <tr><td>Hot dog granel carne (C)</td><td>S/6.80 kg</td><td>S/63.00 bolsa</td></tr>
+                <tr><td>Jamonada especial molde (C)</td><td>S/25.00 kg</td><td>S/45.00 molde</td></tr>
+                <tr><td>Mortadela molde (C)</td><td>S/20.00 kg</td><td>S/36.00 molde</td></tr>
+                <tr><td>Pastel de jamón molde (C)</td><td>S/20.00 kg</td><td>S/36.00 molde</td></tr>
+                <tr><td>Chicharrón pepe molde (C)</td><td>S/20.00 kg</td><td>S/18.00 kg (x molde)</td></tr>
+                <tr><td>Jamón pepe molde (C)</td><td>S/16.00 kg</td><td>S/14.00 kg (x molde)</td></tr>
+                <tr><td>Jamón Cerdeña molde (C)</td><td>S/25.00 kg</td><td>S/45.00 molde</td></tr>
+                <tr><td>Jamón del país molde (C)</td><td>S/35.00 kg</td><td>S/32.00 kg (x molde)</td></tr>
+                <tr><td>Salchicha huachana granel (C)</td><td>S/20.00 kg</td><td>S/18.00 (x1k+)</td></tr>
+                <tr><td>Chorizo parrillero granel (C)</td><td>S/22.00 kg</td><td>S/20.00 (x1k+)</td></tr>
+                <tr><td>Cabanossi (C)</td><td>S/10.50 pqt / S/1.20 und</td><td>-</td></tr>
+                <tr><td>Tocino a granel (C)</td><td>S/45.00 kg</td><td>S/42.00 (x1k+)</td></tr>
+                <tr><td>Tocino 100gr (C)</td><td>S/4.50</td><td>S/4.20 (x3+)</td></tr>
+                <tr><td>Salchicha Frankfurt (C)</td><td>S/15.00</td><td>-</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
