@@ -4,20 +4,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const filas = tabla.getElementsByTagName('tr');
 
     buscador.addEventListener('keyup', () => {
-        const filtro = buscador.value.toLowerCase();
+        const filtro = buscador.value.toLowerCase().trim();
 
-        for (let i = 1; i < filas.length; i++) {
-            // Verificamos si la fila es un encabezado de marca
-            if (filas[i].classList.contains('marca-header')) {
-                // Si el buscador está vacío, mostramos las marcas, si no, las ocultamos
-                filas[i].style.display = filtro === "" ? "" : "none";
-                continue; 
+        // 1. Si el buscador está vacío, mostramos todo y salimos
+        if (filtro === "") {
+            for (let i = 0; i < filas.length; i++) {
+                filas[i].style.display = "";
             }
+            return;
+        }
+
+        // 2. Ocultamos todo primero para empezar de cero
+        for (let i = 0; i < filas.length; i++) {
+            filas[i].style.display = "none";
+        }
+
+        // 3. Buscamos coincidencias
+        for (let i = 0; i < filas.length; i++) {
+            // Saltamos los headers en la evaluación del texto
+            if (filas[i].classList.contains('marca-header')) continue;
 
             const celdaProducto = filas[i].getElementsByTagName('td')[0];
             if (celdaProducto) {
                 const textoProducto = celdaProducto.textContent.toLowerCase();
-                filas[i].style.display = textoProducto.includes(filtro) ? "" : "none";
+
+                if (textoProducto.includes(filtro)) {
+                    // Si hay coincidencia, mostramos el producto
+                    filas[i].style.display = "";
+
+                    // RECORREMOS HACIA ARRIBA para encontrar su marca
+                    for (let j = i - 1; j >= 0; j--) {
+                        if (filas[j].classList.contains('marca-header')) {
+                            filas[j].style.display = ""; // Mostramos la marca
+                            break; // Salimos del bucle interno (ya encontramos su marca)
+                        }
+                    }
+                }
             }
         }
     });
